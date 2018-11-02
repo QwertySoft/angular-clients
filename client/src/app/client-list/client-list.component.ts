@@ -21,6 +21,9 @@ export class ClientListComponent implements OnInit {
 
   // Hook onInit de Angular
   ngOnInit() {
+    // Le pedimos el listado de clientes mockeados al servicio
+    // this.clients = this.clientsService.getFromMock();
+
     // Le pedimos el listado de clientes al servicio utilizando un Observable
     this.clientsService.getFromApi().subscribe(
       (data: Client[]) => {
